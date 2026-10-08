@@ -1,0 +1,44 @@
+[
+    {
+        "TestID": "LOGIN_E2E_001",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1"
+    },
+    {
+        "TestID": "LOGIN_E2E_002",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "wrongpassword"
+    },
+    {
+        "TestID": "LOGIN_E2E_003",
+        "Email": "nonexistent@gmail.com",
+        "Password": "password3"
+    },
+    {
+        "TestID": "LOGIN_E2E_004",
+        "Email": "",
+        "Password": ""
+    },
+    {
+        "TestID": "LOGIN_E2E_005",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1"
+    },
+    {
+        "TestID": "LOGIN_E2E_006",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1"
+    },
+    {
+        "TestID": "LOGIN_E2E_007",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "RememberMe": true
+    },
+    {
+        "TestID": "LOGIN_E2E_008",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "RememberMe": true
+    }
+]

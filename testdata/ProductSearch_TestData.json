@@ -1,0 +1,32 @@
+[
+    {
+        "TestID": "REG_E2E_001",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "ProductName": "Health Book"
+    },
+     {
+        "TestID": "REG_E2E_002",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "ProductName": "Health"
+    },
+    {
+        "TestID": "REG_E2E_003",
+             "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "ProductName": "Gun"
+    },  
+    {
+        "TestID": "REG_E2E_004",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "ProductName": "Computer"
+    },  
+    {
+        "TestID": "REG_E2E_005",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "ProductName": "Jeans"
+    }
+]

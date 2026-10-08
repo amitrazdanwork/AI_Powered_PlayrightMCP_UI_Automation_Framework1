@@ -1,0 +1,7 @@
+Error getting error message: Error: locator.textContent: Error: strict mode violation: locator('.message-error, .validation-summary-errors') resolved to 2 elements:
+    1) <div class="message-error">…</div> aka locator('.message-error')
+    2) <div class="validation-summary-errors">…</div> aka getByText('Login was unsuccessful. Please correct the errors and try again. The')
+
+Call log:
+  - waiting for locator('.message-error, .validation-summary-errors')
+

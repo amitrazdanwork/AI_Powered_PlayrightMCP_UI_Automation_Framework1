@@ -1,0 +1,29 @@
+[
+    {
+        "TestID": "REG_E2E_004",
+        "gender": "male",   
+        "FirstName": "Umesh4",
+        "LastName": "Kumar4",
+        "Email": "umeshkumar1@gmail.com",
+        "Password": "password1",
+        "ConfirmPassword": "password1"
+    },
+      {
+        "TestID": "REG_E2E_005",
+        "gender": "male",
+        "FirstName": "Umesh4",
+        "LastName": "Kumar4",
+        "Email": "umeshkumar16@gmail.com",
+        "Password": "password1",
+        "ConfirmPassword": "password2"
+    },
+    {
+        "TestID": "REG_E2E_006",
+        "gender": "male",
+        "FirstName": "Umesh4",
+        "LastName": "Kumar4",
+        "Email": "umeshkumar16gmail.com",
+        "Password": "password1",
+        "ConfirmPassword": "password2"
+    }
+]

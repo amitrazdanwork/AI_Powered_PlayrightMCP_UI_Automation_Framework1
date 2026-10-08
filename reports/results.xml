@@ -1,0 +1,52 @@
+<testsuites id="" name="" tests="8" failures="0" skipped="0" errors="0" time="91.38264600000001">
+<testsuite name="web\login.spec.ts" timestamp="2026-10-08T06:01:59.132Z" hostname="chromium" tests="8" failures="0" skipped="0" time="80.335" errors="0">
+<testcase name="Login Tests › LOGIN_E2E_001 - Login using valid registered credentials @master @sanity @regression @web" classname="web\login.spec.ts" time="6.687">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_001 Completed successfully!
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › LOGIN_E2E_002 - Login with incorrect password @master @sanity @regression @web" classname="web\login.spec.ts" time="6.313">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_002 Completed successfully!
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › LOGIN_E2E_003 - Login with unregistered email @master @regression @web" classname="web\login.spec.ts" time="34.352">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_003 Completed successfully!
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › LOGIN_E2E_004 - Login with blank credentials @master @regression @web" classname="web\login.spec.ts" time="5.866">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_004 Completed successfully!
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › LOGIN_E2E_005 - Login and navigate to account page @master @sanity @regression @web" classname="web\login.spec.ts" time="7.148">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_005 Completed successfully!
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › LOGIN_E2E_006 - Login and logout @master @sanity @regression @web" classname="web\login.spec.ts" time="7.653">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_006 Completed successfully!
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › LOGIN_E2E_007 - Login with Remember Me enabled @master @regression @web" classname="web\login.spec.ts" time="5.998">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_007 Completed successfully!
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › LOGIN_E2E_008 - Login, close/reopen browser, and revisit site @master @end-to-end @web" classname="web\login.spec.ts" time="6.318">
+<system-out>
+<![CDATA[✅ LOGIN_E2E_008 Completed successfully!
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
