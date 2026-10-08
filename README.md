@@ -3,13 +3,20 @@
 A TypeScript-based test automation framework built with **Playwright**, supporting **Web UI testing**, **REST API testing**, and **Database (DB) testing**.
 
 Current setup includes below things: -
-1- UI Automation library = Playwright
-2- Programming language used = Typescript
-3- Model used = POM for UI tests
+1- UI Automation library = Playwright.
+
+2- Programming language used = Typescript.
+
+3- Model used = POM for UI tests.
+
 4- AI tools used: -
+
 A- CommandCode (As AI agent mainly for AI assistance and execution )
+
 B- OpenRouter (As LLM model - free models are used as brain for gathering knowledge)
-C- Playwright MCP CLI 
+
+C- Playwright MCP CLI  - To enable communication or interactions between AI tools and underlying project or local system, APPs etc.
+
 
 ---
 
