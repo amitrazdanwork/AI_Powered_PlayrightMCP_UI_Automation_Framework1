@@ -17,7 +17,7 @@ B- OpenRouter (As LLM model - free models are used as brain for gathering knowle
 
 C- Playwright MCP CLI  - To enable communication or interactions between AI tools and underlying project or local system, APPs etc.
 
-
+NOTE: I have created working set of tests for some of the modules - Login, Registration, Product-Search, Add-to-Cart.
 ---
 
 ## Table of Contents
