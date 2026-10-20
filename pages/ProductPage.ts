@@ -16,10 +16,10 @@ export class ProductPage {
         this.page = page;
 
         // Initialize locators
-        this.lblProductName = page.locator('h1').first();
+        this.lblProductName = page.locator("div[class='search-results'] h2 a").first();
         this.lblPrice = page.locator('.price.actual-price, .price-value').first();
         this.txtQuantity = page.getByLabel('Qty:');
-        this.btnAddToCart = page.getByRole('button', { name: 'Add to cart' });
+        this.btnAddToCart = page.locator("input[value='Add to cart']").first();
         this.btnAddToWishlist = page.getByRole('button', { name: 'Add to wishlist' });
         this.lblAvailability = page.locator('[class*="availability"]');
         this.lblProductDetails = page.locator('.short-description');
@@ -113,5 +113,9 @@ export class ProductPage {
         } catch (error) {
             console.log(`Notification handling: ${error}`);
         }
+    }
+
+    async openProductDetails(): Promise<void> {
+        await this.lblProductName.click();
     }
 }

@@ -4,6 +4,7 @@ export class CheckoutPage {
     readonly page: Page;
 
     // Locators - Billing Address
+    private readonly selBillingAddress: Locator;
     private readonly txtBillingFirstName: Locator;
     private readonly txtBillingLastName: Locator;
     private readonly txtBillingEmail: Locator;
@@ -41,37 +42,38 @@ export class CheckoutPage {
         this.page = page;
 
         // Initialize locators - Billing
-        this.txtBillingFirstName = page.getByLabel('First name:');
-        this.txtBillingLastName = page.getByLabel('Last name:');
-        this.txtBillingEmail = page.getByLabel('Email:');
-        this.txtBillingCompany = page.getByLabel('Company:');
+        this.selBillingAddress = page.getByLabel('Select a billing address from your address book or enter a new address.');
+        this.txtBillingFirstName = page.locator("input#BillingNewAddress_FirstName");
+        this.txtBillingLastName = page.locator("input#BillingNewAddress_LastName");
+        this.txtBillingEmail = page.locator("input#BillingNewAddress_Email");
+        this.txtBillingCompany = page.locator("input#BillingNewAddress_Company");
         this.txtBillingAddress1 = page.getByLabel('Address 1:');
         this.txtBillingAddress2 = page.getByLabel('Address 2:');
         this.txtBillingCity = page.getByLabel('City:');
-        this.txtBillingState = page.getByLabel('State / province:');
+        this.txtBillingState = page.locator("select#BillingNewAddress_StateProvinceId");
         this.txtBillingZip = page.getByLabel('Zip / postal code:');
-        this.txtBillingCountry = page.getByLabel('Country / region:');
+        this.txtBillingCountry = page.getByLabel('Country:');
         this.txtBillingPhone = page.getByLabel('Phone number:');
         this.txtBillingFax = page.getByLabel('Fax number:');
-        this.btnBillingContinue = page.getByRole('button', { name: 'Continue', exact: true }).first();
+        this.btnBillingContinue = page.locator('input.new-address-next-step-button').first();
 
         // Shipping
-        this.btnShippingContinue = page.getByRole('button', { name: 'Continue', exact: true }).nth(1);
+        this.btnShippingContinue = page.locator('input.new-address-next-step-button').nth(1);
 
         // Shipping Method
-        this.btnShippingMethodContinue = page.getByRole('button', { name: 'Continue', exact: true }).nth(2);
+        this.btnShippingMethodContinue = page.locator('input.shipping-method-next-step-button');
 
         // Payment Method
-        this.btnPaymentMethodContinue = page.getByRole('button', { name: 'Continue', exact: true }).nth(3);
+        this.btnPaymentMethodContinue = page.locator('input.payment-method-next-step-button');
 
         // Payment Info
-        this.btnPaymentInfoContinue = page.getByRole('button', { name: 'Continue', exact: true }).nth(4);
+        this.btnPaymentInfoContinue = page.locator('input.payment-info-next-step-button');
 
         // Confirm Order
-        this.btnConfirmOrder = page.getByRole('button', { name: 'Confirm' });
+        this.btnConfirmOrder = page.locator('input.confirm-order-next-step-button');
 
         // Order Confirmation
-        this.lblOrderNumber = page.locator('.order-number');
+        this.lblOrderNumber = page.locator('li:has-text("Order number:")');
         this.lblOrderConfirmation = page.locator('.order-complete-message, .section.order-completion-content');
     }
 
@@ -94,6 +96,10 @@ export class CheckoutPage {
         phone: string;
         fax?: string;
     }): Promise<void> {
+        // First select "New Address" from the dropdown to show the form fields
+        await this.selBillingAddress.selectOption('New Address');
+        await this.page.waitForTimeout(500); // Wait for form to appear
+
         await this.txtBillingFirstName.fill(billingData.firstName);
         await this.txtBillingLastName.fill(billingData.lastName);
         await this.txtBillingEmail.fill(billingData.email);
@@ -101,9 +107,10 @@ export class CheckoutPage {
         await this.txtBillingAddress1.fill(billingData.address1);
         if (billingData.address2) await this.txtBillingAddress2.fill(billingData.address2);
         await this.txtBillingCity.fill(billingData.city);
-        await this.txtBillingState.fill(billingData.state);
-        await this.txtBillingZip.fill(billingData.zip);
         await this.txtBillingCountry.selectOption(billingData.country);
+        await this.page.waitForTimeout(300); // Wait for state options to load
+        await this.txtBillingState.selectOption(billingData.state);
+        await this.txtBillingZip.fill(billingData.zip);
         await this.txtBillingPhone.fill(billingData.phone);
         if (billingData.fax) await this.txtBillingFax.fill(billingData.fax);
     }
@@ -168,9 +175,16 @@ export class CheckoutPage {
      */
     async getOrderNumber(): Promise<string> {
         try {
-            const text = await this.lblOrderNumber.textContent() || '';
-            const match = text.match(/Order number:?\s*(\d+)/i);
-            return match ? match[1] : text;
+            // Try the order-number locator first
+            let text = await this.lblOrderNumber.textContent() || '';
+            let match = text.match(/Order number:?\s*(\d+)/i);
+            if (match) {
+                return match[1];
+            }
+            // Fallback: search entire page for order number pattern
+            text = await this.page.textContent() || '';
+            match = text.match(/Order number:?\s*(\d+)/i);
+            return match ? match[1] : '';
         } catch (error) {
             console.log(`Error getting order number: ${error}`);
             return '';

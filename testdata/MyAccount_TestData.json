@@ -1,0 +1,26 @@
+[
+    {
+        "TestID": "ACCOUNT_E2E_002",
+        "Gender": "M",
+        "FirstName": "Umesh",
+        "LastName": "Kumar",
+        "Email": "umeshkumar22@gmail.com",
+        "Password": "Password1#"
+    },
+    {
+        "TestID": "ACCOUNT_E2E_003",
+        "Gender": "M",
+        "FirstName": "Umesh",
+        "LastName": "Kumar",
+        "Email": "umeshkumar221@gmail.com",
+        "Password": "Password1#"
+    },
+    {
+        "TestID": "ACCOUNT_E2E_004",
+        "Gender": "M",
+        "FirstName": "Umesh",
+        "LastName": "Kumar",
+        "Email": "umeshkumar221@gmail.com",
+        "Password": "Password1#"
+    }
+]

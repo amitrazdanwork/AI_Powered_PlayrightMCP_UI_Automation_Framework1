@@ -1,0 +1,428 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: web\my-account.spec.ts >> My Account Tests >> ACCOUNT_E2E_003 - Update account information @master @sanity @regression @web
+- Location: tests\web\my-account.spec.ts:89:9
+
+# Error details
+
+```
+Error: expect(received).toBeTruthy()
+
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f3e2]:
+  - generic [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link [ref=f3e6] [cursor=pointer]:
+        - /url: /
+        - img "Tricentis Demo Web Shop" [ref=f3e7]
+      - list [ref=f3e10]:
+        - listitem [ref=f3e11]:
+          - link "Register" [ref=f3e12] [cursor=pointer]:
+            - /url: /register
+        - listitem [ref=f3e13]:
+          - link "Log in" [ref=f3e14] [cursor=pointer]:
+            - /url: /login
+        - listitem [ref=f3e15]:
+          - link "Shopping cart (0)" [ref=f3e16] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=f3e17]: Shopping cart
+            - generic [ref=f3e18]: (0)
+        - listitem [ref=f3e19]:
+          - link "Wishlist (0)" [ref=f3e20] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=f3e21]: Wishlist
+            - generic [ref=f3e22]: (0)
+      - generic [ref=f3e24]:
+        - status [ref=f3e25]
+        - textbox [ref=f3e26]: Search store
+        - button "Search" [ref=f3e27] [cursor=pointer]
+    - list [ref=f3e29]:
+      - listitem [ref=f3e30]:
+        - link "Books" [ref=f3e31] [cursor=pointer]:
+          - /url: /books
+      - listitem [ref=f3e32]:
+        - link "Computers" [ref=f3e33] [cursor=pointer]:
+          - /url: /computers
+      - listitem [ref=f3e34]:
+        - link "Electronics" [ref=f3e35] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=f3e36]:
+        - link "Apparel & Shoes" [ref=f3e37] [cursor=pointer]:
+          - /url: /apparel-shoes
+      - listitem [ref=f3e38]:
+        - link "Digital downloads" [ref=f3e39] [cursor=pointer]:
+          - /url: /digital-downloads
+      - listitem [ref=f3e40]:
+        - link "Jewelry" [ref=f3e41] [cursor=pointer]:
+          - /url: /jewelry
+      - listitem [ref=f3e42]:
+        - link "Gift Cards" [ref=f3e43] [cursor=pointer]:
+          - /url: /gift-cards
+    - generic:
+      - generic [ref=f3e44]:
+        - generic [ref=f3e45]:
+          - strong [ref=f3e47]: Categories
+          - list [ref=f3e49]:
+            - listitem [ref=f3e50]:
+              - link "Books" [ref=f3e51] [cursor=pointer]:
+                - /url: /books
+            - listitem [ref=f3e52]:
+              - link "Computers" [ref=f3e53] [cursor=pointer]:
+                - /url: /computers
+            - listitem [ref=f3e54]:
+              - link "Electronics" [ref=f3e55] [cursor=pointer]:
+                - /url: /electronics
+            - listitem [ref=f3e56]:
+              - link "Apparel & Shoes" [ref=f3e57] [cursor=pointer]:
+                - /url: /apparel-shoes
+            - listitem [ref=f3e58]:
+              - link "Digital downloads" [ref=f3e59] [cursor=pointer]:
+                - /url: /digital-downloads
+            - listitem [ref=f3e60]:
+              - link "Jewelry" [ref=f3e61] [cursor=pointer]:
+                - /url: /jewelry
+            - listitem [ref=f3e62]:
+              - link "Gift Cards" [ref=f3e63] [cursor=pointer]:
+                - /url: /gift-cards
+        - generic [ref=f3e64]:
+          - strong [ref=f3e66]: Manufacturers
+          - list [ref=f3e68]:
+            - listitem [ref=f3e69]:
+              - link "Tricentis" [ref=f3e70] [cursor=pointer]:
+                - /url: /tricentis
+        - generic [ref=f3e71]:
+          - strong [ref=f3e73]: Newsletter
+          - generic [ref=f3e75]:
+            - text: "Sign up for our newsletter:"
+            - textbox [ref=f3e77]
+            - button "Subscribe" [ref=f3e79] [cursor=pointer]
+      - generic [ref=f3e81]:
+        - heading "Welcome, Please Sign In!" [level=1] [ref=f3e83]
+        - generic [ref=f3e84]:
+          - generic [ref=f3e85]:
+            - generic [ref=f3e86]:
+              - strong [ref=f3e88]: New Customer
+              - generic [ref=f3e89]: By creating an account on our website you will be able to shop faster, be up to date on an orders status, and keep track of the orders you have previously made.
+              - button "Register" [ref=f3e91] [cursor=pointer]
+            - generic [ref=f3e92]:
+              - strong [ref=f3e94]: Returning Customer
+              - generic [ref=f3e96]:
+                - generic [ref=f3e97]:
+                  - generic [ref=f3e98]: "Email:"
+                  - textbox "Email:" [active] [ref=f3e99]
+                - generic [ref=f3e100]:
+                  - generic [ref=f3e101]: "Password:"
+                  - textbox "Password:" [ref=f3e102]
+                - generic [ref=f3e103]:
+                  - checkbox "Remember me?" [ref=f3e104]
+                  - generic [ref=f3e105]: Remember me?
+                  - link "Forgot password?" [ref=f3e107] [cursor=pointer]:
+                    - /url: /passwordrecovery
+                - button "Log in" [ref=f3e109] [cursor=pointer]
+          - generic [ref=f3e110]:
+            - heading "About login / registration" [level=2] [ref=f3e112]
+            - paragraph [ref=f3e114]: Put your login / registration information here. You can edit this in the admin site.
+  - generic [ref=f3e115]:
+    - generic [ref=f3e116]:
+      - generic [ref=f3e117]:
+        - heading "Information" [level=3] [ref=f3e118]
+        - list [ref=f3e119]:
+          - listitem [ref=f3e120]:
+            - link "Sitemap" [ref=f3e121] [cursor=pointer]:
+              - /url: /sitemap
+          - listitem [ref=f3e122]:
+            - link "Shipping & Returns" [ref=f3e123] [cursor=pointer]:
+              - /url: /shipping-returns
+          - listitem [ref=f3e124]:
+            - link "Privacy Notice" [ref=f3e125] [cursor=pointer]:
+              - /url: /privacy-policy
+          - listitem [ref=f3e126]:
+            - link "Conditions of Use" [ref=f3e127] [cursor=pointer]:
+              - /url: /conditions-of-use
+          - listitem [ref=f3e128]:
+            - link "About us" [ref=f3e129] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=f3e130]:
+            - link "Contact us" [ref=f3e131] [cursor=pointer]:
+              - /url: /contactus
+      - generic [ref=f3e132]:
+        - heading "Customer service" [level=3] [ref=f3e133]
+        - list [ref=f3e134]:
+          - listitem [ref=f3e135]:
+            - link "Search" [ref=f3e136] [cursor=pointer]:
+              - /url: /search
+          - listitem [ref=f3e137]:
+            - link "News" [ref=f3e138] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=f3e139]:
+            - link "Blog" [ref=f3e140] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=f3e141]:
+            - link "Recently viewed products" [ref=f3e142] [cursor=pointer]:
+              - /url: /recentlyviewedproducts
+          - listitem [ref=f3e143]:
+            - link "Compare products list" [ref=f3e144] [cursor=pointer]:
+              - /url: /compareproducts
+          - listitem [ref=f3e145]:
+            - link "New products" [ref=f3e146] [cursor=pointer]:
+              - /url: /newproducts
+      - generic [ref=f3e147]:
+        - heading "My account" [level=3] [ref=f3e148]
+        - list [ref=f3e149]:
+          - listitem [ref=f3e150]:
+            - link "My account" [ref=f3e151] [cursor=pointer]:
+              - /url: /customer/info
+          - listitem [ref=f3e152]:
+            - link "Orders" [ref=f3e153] [cursor=pointer]:
+              - /url: /customer/orders
+          - listitem [ref=f3e154]:
+            - link "Addresses" [ref=f3e155] [cursor=pointer]:
+              - /url: /customer/addresses
+          - listitem [ref=f3e156]:
+            - link "Shopping cart" [ref=f3e157] [cursor=pointer]:
+              - /url: /cart
+          - listitem [ref=f3e158]:
+            - link "Wishlist" [ref=f3e159] [cursor=pointer]:
+              - /url: /wishlist
+      - generic [ref=f3e160]:
+        - heading "Follow us" [level=3] [ref=f3e161]
+        - list [ref=f3e162]:
+          - listitem [ref=f3e163]:
+            - link "Facebook" [ref=f3e164] [cursor=pointer]:
+              - /url: http://www.facebook.com/nopCommerce
+          - listitem [ref=f3e165]:
+            - link "Twitter" [ref=f3e166] [cursor=pointer]:
+              - /url: https://twitter.com/nopCommerce
+          - listitem [ref=f3e167]:
+            - link "RSS" [ref=f3e168] [cursor=pointer]:
+              - /url: /news/rss/1
+          - listitem [ref=f3e169]:
+            - link "YouTube" [ref=f3e170] [cursor=pointer]:
+              - /url: http://www.youtube.com/user/nopCommerce
+          - listitem [ref=f3e171]:
+            - link "Google+" [ref=f3e172] [cursor=pointer]:
+              - /url: https://plus.google.com/+nopcommerce
+    - generic [ref=f3e173]:
+      - text: Powered by
+      - link "nopCommerce" [ref=f3e174] [cursor=pointer]:
+        - /url: http://www.nopcommerce.com/
+    - generic [ref=f3e175]: Copyright © 2026 Tricentis Demo Web Shop. All rights reserved.
+```
+
+# Test source
+
+```ts
+  12  | // using custom fixtures
+  13  | import { test, expect } from '../../fixtures/pageFixtures';
+  14  | import { Helper } from '../../utils/helper';
+  15  | 
+  16  | test.describe('My Account Tests', () => {
+  17  | 
+  18  |     test('ACCOUNT_E2E_001 - Login → Open My Account @master @sanity @regression @web', async ({ homePage, loginPage, myAccountPage }) => {
+  19  |        
+  20  |         const loginData = Helper.getLoginDetails();
+  21  | 
+  22  |         await test.step('1) Navigate to the application URL and login', async () => {
+  23  |             
+  24  |             const isHomePage = await homePage.isHomePageExists();
+  25  |             expect(isHomePage).toBeTruthy();
+  26  | 
+  27  |             await homePage.clickLogin();
+  28  |         });
+  29  | 
+  30  |         await test.step('2) Login with valid credentials', async () => {
+  31  |             const isLoginPage = await loginPage.isLoginPageExists();
+  32  |             expect(isLoginPage).toBeTruthy();
+  33  | 
+  34  |             await loginPage.login(loginData.email, loginData.password);
+  35  |         });
+  36  | 
+  37  |         await test.step('3) Verify account page opens successfully', async () => {
+  38  |             // After login, user should be on account page or can navigate there
+  39  |             await loginPage.page.goto(`${process.env.WEB_APP_URL}/customer/info`);
+  40  |             await loginPage.page.waitForLoadState('networkidle');
+  41  | 
+  42  |             const isAccountPage = await myAccountPage.isMyAccountPageExists();
+  43  |             expect(isAccountPage).toBeTruthy();
+  44  |         });
+  45  | 
+  46  |         console.log('✅ ACCOUNT_E2E_001 Completed successfully!');
+  47  |     });
+  48  | 
+  49  |     test('ACCOUNT_E2E_002 - Verify registered user information @master @sanity @regression @web', async ({ homePage, loginPage, myAccountPage }) => {
+  50  |        
+  51  |         const testData = Helper.getMyAccountData('ACCOUNT_E2E_002');
+  52  | 
+  53  |         await test.step('1) Navigate to the application URL and login', async () => {
+  54  |             const isHomePage = await homePage.isHomePageExists();
+  55  |             expect(isHomePage).toBeTruthy();
+  56  | 
+  57  |             await homePage.clickLogin();
+  58  |         });
+  59  | 
+  60  |         await test.step('2) Login with valid credentials', async () => {
+  61  |             const isLoginPage = await loginPage.isLoginPageExists();
+  62  |             expect(isLoginPage).toBeTruthy();
+  63  | 
+  64  |             await loginPage.login(testData.Email, testData.Password);
+  65  |         });
+  66  | 
+  67  |         await test.step('3) Verify account information is displayed', async () => {
+  68  |             await loginPage.page.goto(`${process.env.WEB_APP_URL}/customer/info`);
+  69  |             await loginPage.page.waitForLoadState('networkidle');
+  70  | 
+  71  |             const isAccountPage = await myAccountPage.isMyAccountPageExists();
+  72  |             expect(isAccountPage).toBeTruthy();
+  73  | 
+  74  |             const selectedGender = await myAccountPage.getAccountSelectedGender();
+  75  |             const firstName = await myAccountPage.getAccountInfoFirstName();
+  76  |             const lastName = await myAccountPage.getAccountInfoLastName();
+  77  |             const email = await myAccountPage.getAccountInfoEmail();
+  78  | 
+  79  |             //Assertions
+  80  |             expect(firstName).toBe(testData.FirstName);
+  81  |             expect(lastName).toBe(testData.LastName);
+  82  |             expect(email).toBe(testData.Email);
+  83  |             expect(selectedGender).toBe(testData.Gender);
+  84  |         });
+  85  | 
+  86  |         console.log('✅ ACCOUNT_E2E_002 Completed successfully!');
+  87  |     });
+  88  | 
+  89  |     test('ACCOUNT_E2E_003 - Update account information @master @sanity @regression @web', async ({ homePage, loginPage, myAccountPage }) => {
+  90  |         
+  91  |         const testData = Helper.getMyAccountData('ACCOUNT_E2E_003');
+  92  | 
+  93  |         await test.step('1) Navigate to the application URL and login', async () => {
+  94  |             const isHomePage = await homePage.isHomePageExists();
+  95  |             expect(isHomePage).toBeTruthy();
+  96  | 
+  97  |             await homePage.clickLogin();
+  98  |         });
+  99  | 
+  100 |         await test.step('2) Login with valid credentials', async () => {
+  101 |             const isLoginPage = await loginPage.isLoginPageExists();
+  102 |             expect(isLoginPage).toBeTruthy();
+  103 | 
+  104 |             await loginPage.login(testData.Email, testData.Password);
+  105 |         });
+  106 | 
+  107 |         await test.step('3) Update account information', async () => {
+  108 |             await loginPage.page.goto(`${process.env.WEB_APP_URL}/customer/info`);
+  109 |             await loginPage.page.waitForLoadState('networkidle');
+  110 | 
+  111 |             const isAccountPage = await myAccountPage.isMyAccountPageExists();
+> 112 |             expect(isAccountPage).toBeTruthy();
+      |                                   ^ Error: expect(received).toBeTruthy()
+  113 | 
+  114 |             await myAccountPage.updateAccountInfo('TestFirst', 'TestLast', testData.Email);
+  115 |         });
+  116 | 
+  117 |         await test.step('4) Verify updated information is saved', async () => {
+  118 |             //Open the accounts page again to verify the updated information    
+  119 |             await loginPage.page.goto(`${process.env.WEB_APP_URL}/customer/info`);
+  120 | 
+  121 |             await loginPage.page.waitForLoadState('networkidle');
+  122 | 
+  123 |             const updatedFirstName = await myAccountPage.getAccountInfoFirstName();
+  124 |             const updatedLastName = await myAccountPage.getAccountInfoLastName();
+  125 |             const updatedEmail = await myAccountPage.getAccountInfoEmail();
+  126 | 
+  127 |             expect(updatedFirstName).toBe('TestFirst');
+  128 |             expect(updatedLastName).toBe('TestLast');
+  129 |             expect(updatedEmail).toBe(testData.Email);
+  130 |         });
+  131 | 
+  132 |         console.log('✅ ACCOUNT_E2E_003 Completed successfully!');
+  133 |     });
+  134 | 
+  135 |     test('ACCOUNT_E2E_004 - Update password and login with new password @master @sanity @regression @web', async ({ homePage, loginPage, myAccountPage }) => {
+  136 |         const loginData = Helper.getLoginDetails();
+  137 |         const newPassword = 'newpassword456';
+  138 | 
+  139 |         await test.step('1) Navigate to the application URL and login', async () => {
+  140 |             const isHomePage = await homePage.isHomePageExists();
+  141 |             expect(isHomePage).toBeTruthy();
+  142 | 
+  143 |             await homePage.clickLogin();
+  144 |         });
+  145 | 
+  146 |         await test.step('2) Login with valid credentials', async () => {
+  147 |             const isLoginPage = await loginPage.isLoginPageExists();
+  148 |             expect(isLoginPage).toBeTruthy();
+  149 | 
+  150 |             await loginPage.login(loginData.email, loginData.password);
+  151 |         });
+  152 | 
+  153 |         await test.step('3) Update password', async () => {
+  154 |             await loginPage.page.goto(`${process.env.WEB_APP_URL}/customer/changepassword`);
+  155 |             await loginPage.page.waitForLoadState('networkidle');
+  156 | 
+  157 |             await myAccountPage.changePassword(loginData.password, newPassword, newPassword);
+  158 |         });
+  159 | 
+  160 |         await test.step('4) Verify new password works', async () => {
+  161 |             // Logout first
+  162 |             const logoutLink = homePage.page.getByRole('link', { name: 'Log out' });
+  163 |             if (await logoutLink.isVisible()) {
+  164 |                 await logoutLink.click();
+  165 |                 await homePage.page.waitForLoadState('networkidle');
+  166 |             }
+  167 | 
+  168 |             // Login again with new password
+  169 |             await homePage.clickLogin();
+  170 |             const isLoginPage = await loginPage.isLoginPageExists();
+  171 |             expect(isLoginPage).toBeTruthy();
+  172 | 
+  173 |             await loginPage.login(loginData.email, newPassword);
+  174 |             const isSuccess = await loginPage.isLoginSuccessful();
+  175 |             expect(isSuccess).toBeTruthy();
+  176 |         });
+  177 | 
+  178 |         console.log('✅ ACCOUNT_E2E_004 Completed successfully!');
+  179 |     });
+  180 | 
+  181 |     test('ACCOUNT_E2E_005 - Open order history from account @master @sanity @regression @web', async ({ homePage, loginPage, myAccountPage }) => {
+  182 |         const loginData = Helper.getLoginDetails();
+  183 | 
+  184 |         await test.step('1) Navigate to the application URL and login', async () => {
+  185 |             const isHomePage = await homePage.isHomePageExists();
+  186 |             expect(isHomePage).toBeTruthy();
+  187 | 
+  188 |             await homePage.clickLogin();
+  189 |         });
+  190 | 
+  191 |         await test.step('2) Login with valid credentials', async () => {
+  192 |             const isLoginPage = await loginPage.isLoginPageExists();
+  193 |             expect(isLoginPage).toBeTruthy();
+  194 | 
+  195 |             await loginPage.login(loginData.email, loginData.password);
+  196 |         });
+  197 | 
+  198 |         await test.step('3) Open order history', async () => {
+  199 |             await loginPage.page.goto(`${process.env.WEB_APP_URL}/customer/orders`);
+  200 |             await loginPage.page.waitForLoadState('networkidle');
+  201 | 
+  202 |             // Verify orders section is displayed
+  203 |             const ordersHeading = loginPage.page.locator('h1:has-text("Orders")');
+  204 |             await expect(ordersHeading).toBeVisible();
+  205 |         });
+  206 | 
+  207 |         await test.step('4) Verify previous orders are displayed', async () => {
+  208 |             // Order history page should have a customer orders grid
+  209 |             const ordersGrid = loginPage.page.locator('.customer-orders-grid, .order-list');
+  210 |             // Verify the page structure exists (may or may not have orders)
+  211 |         });
+  212 | 
+```

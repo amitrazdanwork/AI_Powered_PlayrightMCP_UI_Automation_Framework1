@@ -17,13 +17,24 @@ export class Helper {
     }
 
     /**
+     * Gets login credentials from test data file
+     * @param testId - Test ID to get data for
+     * @returns Object with email and password
+     */
+    static getMyAccountData(testId: string) {
+        const testData = DataProvider.readJson('./testdata/MyAccount_TestData.json');
+        const data = testData.find((item: any) => item.TestID === testId);
+        return data;
+    }
+
+    /**
      * Gets login credentials from environment/test data
      * @returns Object with email and password
      */
     static getLoginDetails() {
         return {
-            email: process.env.APP_EMAIL || 'test@example.com',
-            password: process.env.APP_PASSWORD || 'password123'
+            email: process.env.APP_EMAIL || 'umeshkumar1@gmail.com',
+            password: process.env.APP_PASSWORD || 'password1'
         };
     }
 

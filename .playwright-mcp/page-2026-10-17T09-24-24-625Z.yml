@@ -1,0 +1,144 @@
+- generic [ref=f6e2]:
+  - generic [ref=f6e3]:
+    - generic [ref=f6e4]:
+      - link [ref=f6e6] [cursor=pointer]:
+        - /url: /
+        - img "Tricentis Demo Web Shop" [ref=f6e7]
+      - list [ref=f6e10]:
+        - listitem [ref=f6e11]:
+          - link "testuser1792050816292@gmail.com" [ref=f6e12] [cursor=pointer]:
+            - /url: /customer/info
+        - listitem [ref=f6e13]:
+          - link "Log out" [ref=f6e14] [cursor=pointer]:
+            - /url: /logout
+        - listitem [ref=f6e15]:
+          - link "Shopping cart (0)" [ref=f6e16] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=f6e17]: Shopping cart
+            - generic [ref=f6e18]: (0)
+        - listitem [ref=f6e19]:
+          - link "Wishlist (0)" [ref=f6e20] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=f6e21]: Wishlist
+            - generic [ref=f6e22]: (0)
+      - generic [ref=f6e24]:
+        - status [ref=f6e25]
+        - textbox [ref=f6e26]: Search store
+        - button "Search" [ref=f6e27] [cursor=pointer]
+    - list [ref=f6e29]:
+      - listitem [ref=f6e30]:
+        - link "Books" [ref=f6e31] [cursor=pointer]:
+          - /url: /books
+      - listitem [ref=f6e32]:
+        - link "Computers" [ref=f6e33] [cursor=pointer]:
+          - /url: /computers
+      - listitem [ref=f6e34]:
+        - link "Electronics" [ref=f6e35] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=f6e36]:
+        - link "Apparel & Shoes" [ref=f6e37] [cursor=pointer]:
+          - /url: /apparel-shoes
+      - listitem [ref=f6e38]:
+        - link "Digital downloads" [ref=f6e39] [cursor=pointer]:
+          - /url: /digital-downloads
+      - listitem [ref=f6e40]:
+        - link "Jewelry" [ref=f6e41] [cursor=pointer]:
+          - /url: /jewelry
+      - listitem [ref=f6e42]:
+        - link "Gift Cards" [ref=f6e43] [cursor=pointer]:
+          - /url: /gift-cards
+    - generic [ref=f6e45]:
+      - heading "Thank you" [level=1] [ref=f6e47]
+      - generic [ref=f6e49]:
+        - strong [ref=f6e51]: Your order has been successfully processed!
+        - list [ref=f6e52]:
+          - listitem [ref=f6e53]: "Order number: 2400149"
+          - listitem [ref=f6e54]:
+            - link "Click here for order details." [ref=f6e55] [cursor=pointer]:
+              - /url: /orderdetails/2400149
+        - button "Continue" [ref=f6e57] [cursor=pointer]
+  - generic [ref=f6e58]:
+    - generic [ref=f6e59]:
+      - generic [ref=f6e60]:
+        - heading "Information" [level=3] [ref=f6e61]
+        - list [ref=f6e62]:
+          - listitem [ref=f6e63]:
+            - link "Sitemap" [ref=f6e64] [cursor=pointer]:
+              - /url: /sitemap
+          - listitem [ref=f6e65]:
+            - link "Shipping & Returns" [ref=f6e66] [cursor=pointer]:
+              - /url: /shipping-returns
+          - listitem [ref=f6e67]:
+            - link "Privacy Notice" [ref=f6e68] [cursor=pointer]:
+              - /url: /privacy-policy
+          - listitem [ref=f6e69]:
+            - link "Conditions of Use" [ref=f6e70] [cursor=pointer]:
+              - /url: /conditions-of-use
+          - listitem [ref=f6e71]:
+            - link "About us" [ref=f6e72] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=f6e73]:
+            - link "Contact us" [ref=f6e74] [cursor=pointer]:
+              - /url: /contactus
+      - generic [ref=f6e75]:
+        - heading "Customer service" [level=3] [ref=f6e76]
+        - list [ref=f6e77]:
+          - listitem [ref=f6e78]:
+            - link "Search" [ref=f6e79] [cursor=pointer]:
+              - /url: /search
+          - listitem [ref=f6e80]:
+            - link "News" [ref=f6e81] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=f6e82]:
+            - link "Blog" [ref=f6e83] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=f6e84]:
+            - link "Recently viewed products" [ref=f6e85] [cursor=pointer]:
+              - /url: /recentlyviewedproducts
+          - listitem [ref=f6e86]:
+            - link "Compare products list" [ref=f6e87] [cursor=pointer]:
+              - /url: /compareproducts
+          - listitem [ref=f6e88]:
+            - link "New products" [ref=f6e89] [cursor=pointer]:
+              - /url: /newproducts
+      - generic [ref=f6e90]:
+        - heading "My account" [level=3] [ref=f6e91]
+        - list [ref=f6e92]:
+          - listitem [ref=f6e93]:
+            - link "My account" [ref=f6e94] [cursor=pointer]:
+              - /url: /customer/info
+          - listitem [ref=f6e95]:
+            - link "Orders" [ref=f6e96] [cursor=pointer]:
+              - /url: /customer/orders
+          - listitem [ref=f6e97]:
+            - link "Addresses" [ref=f6e98] [cursor=pointer]:
+              - /url: /customer/addresses
+          - listitem [ref=f6e99]:
+            - link "Shopping cart" [ref=f6e100] [cursor=pointer]:
+              - /url: /cart
+          - listitem [ref=f6e101]:
+            - link "Wishlist" [ref=f6e102] [cursor=pointer]:
+              - /url: /wishlist
+      - generic [ref=f6e103]:
+        - heading "Follow us" [level=3] [ref=f6e104]
+        - list [ref=f6e105]:
+          - listitem [ref=f6e106]:
+            - link "Facebook" [ref=f6e107] [cursor=pointer]:
+              - /url: http://www.facebook.com/nopCommerce
+          - listitem [ref=f6e108]:
+            - link "Twitter" [ref=f6e109] [cursor=pointer]:
+              - /url: https://twitter.com/nopCommerce
+          - listitem [ref=f6e110]:
+            - link "RSS" [ref=f6e111] [cursor=pointer]:
+              - /url: /news/rss/1
+          - listitem [ref=f6e112]:
+            - link "YouTube" [ref=f6e113] [cursor=pointer]:
+              - /url: http://www.youtube.com/user/nopCommerce
+          - listitem [ref=f6e114]:
+            - link "Google+" [ref=f6e115] [cursor=pointer]:
+              - /url: https://plus.google.com/+nopcommerce
+    - generic [ref=f6e116]:
+      - text: Powered by
+      - link "nopCommerce" [ref=f6e117] [cursor=pointer]:
+        - /url: http://www.nopcommerce.com/
+    - generic [ref=f6e118]: Copyright © 2026 Tricentis Demo Web Shop. All rights reserved.

@@ -1,0 +1,4 @@
+Error getting result message: Error: locator.textContent: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('.result')
+

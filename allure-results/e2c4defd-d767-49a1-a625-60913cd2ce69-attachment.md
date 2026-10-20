@@ -1,0 +1,385 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: web\product-search.spec.ts >> Product Search Tests >> SEARCH_E2E_001 - Search for an existing product @master @sanity @regression @web
+- Location: tests\web\product-search.spec.ts:18:9
+
+# Error details
+
+```
+Error: expect(received).toContain(expected) // indexOf
+
+Expected substring: "health book"
+Received string:    "search"
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - img "Tricentis Demo Web Shop" [ref=f1e7]
+      - list [ref=f1e10]:
+        - listitem [ref=f1e11]:
+          - link "Register" [ref=f1e12] [cursor=pointer]:
+            - /url: /register
+        - listitem [ref=f1e13]:
+          - link "Log in" [ref=f1e14] [cursor=pointer]:
+            - /url: /login
+        - listitem [ref=f1e15]:
+          - link "Shopping cart (0)" [ref=f1e16] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=f1e17]: Shopping cart
+            - generic [ref=f1e18]: (0)
+        - listitem [ref=f1e19]:
+          - link "Wishlist (0)" [ref=f1e20] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=f1e21]: Wishlist
+            - generic [ref=f1e22]: (0)
+      - generic [ref=f1e24]:
+        - status [ref=f1e25]
+        - textbox [ref=f1e26]: Search store
+        - button "Search" [ref=f1e27] [cursor=pointer]
+    - list [ref=f1e29]:
+      - listitem [ref=f1e30]:
+        - link "Books" [ref=f1e31] [cursor=pointer]:
+          - /url: /books
+      - listitem [ref=f1e32]:
+        - link "Computers" [ref=f1e33] [cursor=pointer]:
+          - /url: /computers
+      - listitem [ref=f1e34]:
+        - link "Electronics" [ref=f1e35] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=f1e36]:
+        - link "Apparel & Shoes" [ref=f1e37] [cursor=pointer]:
+          - /url: /apparel-shoes
+      - listitem [ref=f1e38]:
+        - link "Digital downloads" [ref=f1e39] [cursor=pointer]:
+          - /url: /digital-downloads
+      - listitem [ref=f1e40]:
+        - link "Jewelry" [ref=f1e41] [cursor=pointer]:
+          - /url: /jewelry
+      - listitem [ref=f1e42]:
+        - link "Gift Cards" [ref=f1e43] [cursor=pointer]:
+          - /url: /gift-cards
+    - generic:
+      - generic [ref=f1e44]:
+        - generic [ref=f1e45]:
+          - strong [ref=f1e47]: Categories
+          - list [ref=f1e49]:
+            - listitem [ref=f1e50]:
+              - link "Books" [ref=f1e51] [cursor=pointer]:
+                - /url: /books
+            - listitem [ref=f1e52]:
+              - link "Computers" [ref=f1e53] [cursor=pointer]:
+                - /url: /computers
+            - listitem [ref=f1e54]:
+              - link "Electronics" [ref=f1e55] [cursor=pointer]:
+                - /url: /electronics
+            - listitem [ref=f1e56]:
+              - link "Apparel & Shoes" [ref=f1e57] [cursor=pointer]:
+                - /url: /apparel-shoes
+            - listitem [ref=f1e58]:
+              - link "Digital downloads" [ref=f1e59] [cursor=pointer]:
+                - /url: /digital-downloads
+            - listitem [ref=f1e60]:
+              - link "Jewelry" [ref=f1e61] [cursor=pointer]:
+                - /url: /jewelry
+            - listitem [ref=f1e62]:
+              - link "Gift Cards" [ref=f1e63] [cursor=pointer]:
+                - /url: /gift-cards
+        - generic [ref=f1e64]:
+          - strong [ref=f1e66]: Manufacturers
+          - list [ref=f1e68]:
+            - listitem [ref=f1e69]:
+              - link "Tricentis" [ref=f1e70] [cursor=pointer]:
+                - /url: /tricentis
+        - generic [ref=f1e71]:
+          - strong [ref=f1e73]: Newsletter
+          - generic [ref=f1e75]:
+            - text: "Sign up for our newsletter:"
+            - textbox [ref=f1e77]
+            - button "Subscribe" [ref=f1e79] [cursor=pointer]
+      - generic [ref=f1e81]:
+        - heading "Search" [level=1] [ref=f1e83]
+        - generic [ref=f1e84]:
+          - generic [ref=f1e86]:
+            - generic [ref=f1e87]:
+              - generic [ref=f1e88]:
+                - generic [ref=f1e89]: "Search keyword:"
+                - textbox "Search keyword:" [ref=f1e90]: Health Book
+              - generic [ref=f1e91]:
+                - checkbox "Advanced search" [ref=f1e92]
+                - generic [ref=f1e93]: Advanced search
+            - button "Search" [ref=f1e95] [cursor=pointer]
+          - generic [ref=f1e96]:
+            - generic [ref=f1e97]:
+              - text: View as
+              - combobox [ref=f1e98]:
+                - option "Grid" [selected]
+                - option "List"
+            - generic [ref=f1e99]:
+              - text: Sort by
+              - combobox [ref=f1e100]:
+                - option "Position" [selected]
+                - 'option "Name: A to Z"'
+                - 'option "Name: Z to A"'
+                - 'option "Price: Low to High"'
+                - 'option "Price: High to Low"'
+                - option "Created on"
+            - generic [ref=f1e101]:
+              - text: Display
+              - combobox [ref=f1e102]:
+                - option "4"
+                - option "8" [selected]
+                - option "12"
+              - text: per page
+          - generic [ref=f1e106]:
+            - link "Picture of Health Book" [ref=f1e108] [cursor=pointer]:
+              - /url: /health
+              - img "Picture of Health Book"
+            - generic [ref=f1e109]:
+              - heading [level=2] [ref=f1e110]:
+                - link "Health Book" [ref=f1e111] [cursor=pointer]:
+                  - /url: /health
+              - generic "587 review(s)" [ref=f1e112]
+              - generic [ref=f1e115]:
+                - generic [ref=f1e116]:
+                  - generic [ref=f1e117]: "27.00"
+                  - generic [ref=f1e118]: "10.00"
+                - button "Add to cart" [ref=f1e120] [cursor=pointer]
+  - generic [ref=f1e121]:
+    - generic [ref=f1e122]:
+      - generic [ref=f1e123]:
+        - heading "Information" [level=3] [ref=f1e124]
+        - list [ref=f1e125]:
+          - listitem [ref=f1e126]:
+            - link "Sitemap" [ref=f1e127] [cursor=pointer]:
+              - /url: /sitemap
+          - listitem [ref=f1e128]:
+            - link "Shipping & Returns" [ref=f1e129] [cursor=pointer]:
+              - /url: /shipping-returns
+          - listitem [ref=f1e130]:
+            - link "Privacy Notice" [ref=f1e131] [cursor=pointer]:
+              - /url: /privacy-policy
+          - listitem [ref=f1e132]:
+            - link "Conditions of Use" [ref=f1e133] [cursor=pointer]:
+              - /url: /conditions-of-use
+          - listitem [ref=f1e134]:
+            - link "About us" [ref=f1e135] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=f1e136]:
+            - link "Contact us" [ref=f1e137] [cursor=pointer]:
+              - /url: /contactus
+      - generic [ref=f1e138]:
+        - heading "Customer service" [level=3] [ref=f1e139]
+        - list [ref=f1e140]:
+          - listitem [ref=f1e141]:
+            - link "Search" [ref=f1e142] [cursor=pointer]:
+              - /url: /search
+          - listitem [ref=f1e143]:
+            - link "News" [ref=f1e144] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=f1e145]:
+            - link "Blog" [ref=f1e146] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=f1e147]:
+            - link "Recently viewed products" [ref=f1e148] [cursor=pointer]:
+              - /url: /recentlyviewedproducts
+          - listitem [ref=f1e149]:
+            - link "Compare products list" [ref=f1e150] [cursor=pointer]:
+              - /url: /compareproducts
+          - listitem [ref=f1e151]:
+            - link "New products" [ref=f1e152] [cursor=pointer]:
+              - /url: /newproducts
+      - generic [ref=f1e153]:
+        - heading "My account" [level=3] [ref=f1e154]
+        - list [ref=f1e155]:
+          - listitem [ref=f1e156]:
+            - link "My account" [ref=f1e157] [cursor=pointer]:
+              - /url: /customer/info
+          - listitem [ref=f1e158]:
+            - link "Orders" [ref=f1e159] [cursor=pointer]:
+              - /url: /customer/orders
+          - listitem [ref=f1e160]:
+            - link "Addresses" [ref=f1e161] [cursor=pointer]:
+              - /url: /customer/addresses
+          - listitem [ref=f1e162]:
+            - link "Shopping cart" [ref=f1e163] [cursor=pointer]:
+              - /url: /cart
+          - listitem [ref=f1e164]:
+            - link "Wishlist" [ref=f1e165] [cursor=pointer]:
+              - /url: /wishlist
+      - generic [ref=f1e166]:
+        - heading "Follow us" [level=3] [ref=f1e167]
+        - list [ref=f1e168]:
+          - listitem [ref=f1e169]:
+            - link "Facebook" [ref=f1e170] [cursor=pointer]:
+              - /url: http://www.facebook.com/nopCommerce
+          - listitem [ref=f1e171]:
+            - link "Twitter" [ref=f1e172] [cursor=pointer]:
+              - /url: https://twitter.com/nopCommerce
+          - listitem [ref=f1e173]:
+            - link "RSS" [ref=f1e174] [cursor=pointer]:
+              - /url: /news/rss/1
+          - listitem [ref=f1e175]:
+            - link "YouTube" [ref=f1e176] [cursor=pointer]:
+              - /url: http://www.youtube.com/user/nopCommerce
+          - listitem [ref=f1e177]:
+            - link "Google+" [ref=f1e178] [cursor=pointer]:
+              - /url: https://plus.google.com/+nopcommerce
+    - generic [ref=f1e179]:
+      - text: Powered by
+      - link "nopCommerce" [ref=f1e180] [cursor=pointer]:
+        - /url: http://www.nopcommerce.com/
+    - generic [ref=f1e181]: Copyright © 2026 Tricentis Demo Web Shop. All rights reserved.
+```
+
+# Test source
+
+```ts
+  1   | /**
+  2   |  * Test Case: Product Search Feature
+  3   |  *
+  4   |  * Tags: @master @sanity @regression @web
+  5   |  *
+  6   |  * Steps:
+  7   |  * 1) Navigate to the application URL
+  8   |  * 2) Search for products
+  9   |  * 3) Verify expected results
+  10  |  */
+  11  | 
+  12  | // using custom fixtures
+  13  | import { test, expect } from '../../fixtures/pageFixtures';
+  14  | import { Helper } from '../../utils/helper';
+  15  | 
+  16  | test.describe('Product Search Tests', () => {
+  17  | 
+  18  |     test('SEARCH_E2E_001 - Search for an existing product @master @sanity @regression @web', async ({ homePage, productPage }) => {
+  19  |         const searchData = Helper.getSearchData('SEARCH_E2E_001');
+  20  | 
+  21  |         await test.step('1) Navigate to the application URL', async () => {
+  22  |             const isHomePage = await homePage.isHomePageExists();
+  23  |             expect(isHomePage).toBeTruthy();
+  24  |         });
+  25  | 
+  26  |         await test.step('2) Search for an existing product', async () => {
+  27  |             await homePage.searchProduct(searchData.ProductName);
+  28  |         });
+  29  | 
+  30  |         await test.step('3) Verify matching product is displayed', async () => {
+  31  |             const isProductPage = await productPage.isProductPageExists();
+  32  |             expect(isProductPage).toBeTruthy();
+  33  | 
+  34  |             const productName = await productPage.getProductName();
+> 35  |             expect(productName.toLowerCase()).toContain(searchData.ProductName.toLowerCase());
+      |                                               ^ Error: expect(received).toContain(expected) // indexOf
+  36  |         });
+  37  | 
+  38  |         console.log('✅ SEARCH_E2E_001 Completed successfully!');
+  39  |     });
+  40  | 
+  41  |     test('SEARCH_E2E_002 - Search using partial product name @master @sanity @regression @web', async ({ homePage, productPage }) => {
+  42  |         const searchData = Helper.getSearchData('SEARCH_E2E_002');
+  43  | 
+  44  |         await test.step('1) Navigate to the application URL', async () => {
+  45  |             const isHomePage = await homePage.isHomePageExists();
+  46  |             expect(isHomePage).toBeTruthy();
+  47  |         });
+  48  | 
+  49  |         await test.step('2) Search using partial product name', async () => {
+  50  |             await homePage.searchProduct(searchData.ProductName);
+  51  |         });
+  52  | 
+  53  |         await test.step('3) Verify relevant products are displayed', async () => {
+  54  |             // Search results page should show products
+  55  |             // Check if we're on search results or product page
+  56  |             const isProductPage = await productPage.isProductPageExists();
+  57  |             // Could be on search results page with multiple products
+  58  |             // Just verify we got results
+  59  |         });
+  60  | 
+  61  |         console.log('✅ SEARCH_E2E_002 Completed successfully!');
+  62  |     });
+  63  | 
+  64  |     test('SEARCH_E2E_003 - Search using non-existing product @master @regression @web', async ({ homePage }) => {
+  65  |         const searchData = Helper.getSearchData('SEARCH_E2E_003');
+  66  | 
+  67  |         await test.step('1) Navigate to the application URL', async () => {
+  68  |             const isHomePage = await homePage.isHomePageExists();
+  69  |             expect(isHomePage).toBeTruthy();
+  70  |         });
+  71  | 
+  72  |         await test.step('2) Search using non-existing product', async () => {
+  73  |             await homePage.searchProduct(searchData.ProductName);
+  74  |         });
+  75  | 
+  76  |         await test.step('3) Verify no-result state/message is displayed', async () => {
+  77  |             // Check for no results message
+  78  |             const noResults = homePage.page.locator(':has-text("No products were found")');
+  79  |             await expect(noResults).toBeVisible();
+  80  |         });
+  81  | 
+  82  |         console.log('✅ SEARCH_E2E_003 Completed successfully!');
+  83  |     });
+  84  | 
+  85  |     test('SEARCH_E2E_004 - Search and open product from results @master @sanity @regression @web', async ({ homePage, productPage }) => {
+  86  |         const searchData = Helper.getSearchData('SEARCH_E2E_004');
+  87  | 
+  88  |         await test.step('1) Navigate to the application URL', async () => {
+  89  |             const isHomePage = await homePage.isHomePageExists();
+  90  |             expect(isHomePage).toBeTruthy();
+  91  |         });
+  92  | 
+  93  |         await test.step('2) Search and open product from results', async () => {
+  94  |             await homePage.searchProduct(searchData.ProductName);
+  95  |         });
+  96  | 
+  97  |         await test.step('3) Verify correct product details page opens', async () => {
+  98  |             const isProductPage = await productPage.isProductPageExists();
+  99  |             expect(isProductPage).toBeTruthy();
+  100 | 
+  101 |             const productName = await productPage.getProductName();
+  102 |             expect(productName.toLowerCase()).toContain(searchData.ProductName.toLowerCase());
+  103 |         });
+  104 | 
+  105 |         console.log('✅ SEARCH_E2E_004 Completed successfully!');
+  106 |     });
+  107 | 
+  108 |     test('SEARCH_E2E_005 - Search product and add it to cart from results @master @regression @web', async ({ homePage, productPage, cartPage }) => {
+  109 |         const searchData = Helper.getSearchData('SEARCH_E2E_005');
+  110 | 
+  111 |         await test.step('1) Navigate to the application URL', async () => {
+  112 |             const isHomePage = await homePage.isHomePageExists();
+  113 |             expect(isHomePage).toBeTruthy();
+  114 |         });
+  115 | 
+  116 |         await test.step('2) Search product and add it to cart from results', async () => {
+  117 |             await homePage.searchProduct(searchData.ProductName);
+  118 | 
+  119 |             const isProductPage = await productPage.isProductPageExists();
+  120 |             expect(isProductPage).toBeTruthy();
+  121 | 
+  122 |             await productPage.clickAddToCart();
+  123 |             await productPage.waitForCartNotification();
+  124 |         });
+  125 | 
+  126 |         await test.step('3) Verify correct product is added to cart', async () => {
+  127 |             await homePage.clickCart();
+  128 | 
+  129 |             const isCartPage = await cartPage.isCartPageExists();
+  130 |             expect(isCartPage).toBeTruthy();
+  131 | 
+  132 |             const productNames = await cartPage.getProductNames();
+  133 |             expect(productNames.some(name => name.toLowerCase().includes(searchData.ProductName.toLowerCase()))).toBeTruthy();
+  134 |         });
+  135 | 
+```

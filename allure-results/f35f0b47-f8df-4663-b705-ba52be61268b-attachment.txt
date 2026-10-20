@@ -1,0 +1,4 @@
+Error getting account info: Error: locator.textContent: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('.account-summary, .customer-info')
+
