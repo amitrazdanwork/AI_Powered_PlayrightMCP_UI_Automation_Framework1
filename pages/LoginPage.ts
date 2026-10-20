@@ -1,7 +1,8 @@
 import { Page, Locator, expect } from '@playwright/test';
 
 export class LoginPage {
-    private readonly page: Page;
+
+    readonly page: Page;
 
     // Locators
     private readonly txtEmail: Locator;

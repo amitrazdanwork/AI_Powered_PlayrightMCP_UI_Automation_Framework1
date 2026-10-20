@@ -1,0 +1,15 @@
+Error getting result message: Error: locator.textContent: Error: strict mode violation: locator('.validation-summary-errors, .field-validation-error, .input-validation-error') resolved to 10 elements:
+    1) <input value="" type="text" id="FirstName" data-val="true" name="FirstName" data-val-required="First name is required." class="text-box single-line input-validation-error"/> aka getByRole('textbox', { name: 'First name:' })
+    2) <span data-valmsg-replace="true" data-valmsg-for="FirstName" class="field-validation-error">…</span> aka locator('span').filter({ hasText: 'First name is required.' }).first()
+    3) <input value="" type="text" id="LastName" data-val="true" name="LastName" data-val-required="Last name is required." class="text-box single-line input-validation-error"/> aka getByRole('textbox', { name: 'Last name:' })
+    4) <span data-valmsg-for="LastName" data-valmsg-replace="true" class="field-validation-error">…</span> aka locator('span').filter({ hasText: 'Last name is required.' }).first()
+    5) <input value="" id="Email" type="text" name="Email" data-val="true" data-val-email="Wrong email" data-val-required="Email is required." class="text-box single-line input-validation-error"/> aka getByRole('textbox', { name: 'Email:' })
+    6) <span data-valmsg-for="Email" data-valmsg-replace="true" class="field-validation-error">…</span> aka locator('span').filter({ hasText: 'Email is required.' }).first()
+    7) <input value="" id="Password" data-val="true" name="Password" type="password" data-val-length-min="6" data-val-length-max="999" data-val-required="Password is required." class="text-box single-line password input-validation-error" data-val-length="The password should have at least 6 characters."/> aka getByRole('textbox', { name: 'Password:', exact: true })
+    8) <span data-valmsg-for="Password" data-valmsg-replace="true" class="field-validation-error">…</span> aka locator('span').filter({ hasText: 'Password is required.' }).first()
+    9) <input value="" data-val="true" type="password" id="ConfirmPassword" name="ConfirmPassword" data-val-equalto-other="*.Password" data-val-required="Password is required." class="text-box single-line password input-validation-error" data-val-equalto="The password and confirmation password do not match."/> aka getByRole('textbox', { name: 'Confirm password:' })
+    10) <span data-valmsg-replace="true" class="field-validation-error" data-valmsg-for="ConfirmPassword">…</span> aka locator('span').filter({ hasText: 'Password is required.' }).nth(2)
+
+Call log:
+  - waiting for locator('.validation-summary-errors, .field-validation-error, .input-validation-error')
+

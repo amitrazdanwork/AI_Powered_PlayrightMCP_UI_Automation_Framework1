@@ -13,20 +13,22 @@ export class RegisterPage {
     private readonly txtConfirmPassword: Locator;
     private readonly btnRegister: Locator;
     private readonly lblResult: Locator;
+    private readonly spnValidationError: Locator;
 
     constructor(page: Page) {
         this.page = page;
 
         // Initialize locators
-        this.rdGenderMale = page.getByRole('radio', { name: 'Male' });
-        this.rdGenderFemale = page.getByRole('radio', { name: 'Female' });
-        this.txtFirstName = page.getByLabel('First name:');
-        this.txtLastName = page.getByLabel('Last name:');
-        this.txtEmail = page.getByLabel('Email:');
-        this.txtPassword = page.getByLabel('Password:');
-        this.txtConfirmPassword = page.getByLabel('Confirm password:');
+        this.rdGenderMale = page.locator('#gender-male');
+        this.rdGenderFemale = page.locator('#gender-female');
+        this.txtFirstName = page.locator('#FirstName');
+        this.txtLastName = page.locator('#LastName');
+        this.txtEmail = page.locator('#Email');
+        this.txtPassword = page.locator('#Password');
+        this.txtConfirmPassword = page.locator('#ConfirmPassword');
         this.btnRegister = page.getByRole('button', { name: 'Register' });
         this.lblResult = page.locator('.result');
+        this.spnValidationError = page.locator('.validation-summary-errors, .field-validation-error, .input-validation-error');
     }
 
     /**
@@ -123,7 +125,25 @@ export class RegisterPage {
      */
     async getResultMessage(): Promise<string> {
         try {
-            return await this.lblResult.textContent() || '';
+            let resultText = '';
+            if (await this.lblResult.count() > 0) {
+                resultText = await this.lblResult.textContent() || '';
+            }
+            if (resultText.length > 0) {
+                return resultText;
+            }
+            const errorCount = await this.spnValidationError.count();
+            if (errorCount > 0) {
+                const messages: string[] = [];
+                for (let i = 0; i < errorCount; i++) {
+                    const text = await this.spnValidationError.nth(i).textContent() || '';
+                    if (text.trim().length > 0) {
+                        messages.push(text.trim());
+                    }
+                }
+                return messages.join(' ');
+            }
+            return '';
         } catch (error) {
             console.log(`Error getting result message: ${error}`);
             return '';

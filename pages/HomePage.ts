@@ -24,9 +24,9 @@ export class HomePage {
         // Initialize locators
         this.lnkRegister = page.getByRole('link', { name: 'Register' });
         this.lnkLogin = page.getByRole('link', { name: 'Log in' });
-        this.lnkCart = page.getByRole('link', { name: 'Shopping cart' });
-        this.lnkWishlist = page.getByRole('link', { name: 'Wishlist' });
-        this.txtSearch = page.getByPlaceholder('Search store');
+        this.lnkCart = page.locator('.ico-cart').first();
+        this.lnkWishlist = page.locator('.ico-wishlist').first();
+        this.txtSearch = page.locator("input#small-searchterms");
         this.btnSearch = page.getByRole('button', { name: 'Search' });
         this.lnkBooks = page.getByRole('link', { name: 'Books' });
         this.lnkComputers = page.getByRole('link', { name: 'Computers' });

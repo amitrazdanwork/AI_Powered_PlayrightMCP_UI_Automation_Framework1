@@ -22,11 +22,11 @@ export class CartPage {
         this.txtQuantities = page.locator('input.qty-input');
         this.btnUpdateCart = page.getByRole('button', { name: 'Update shopping cart' });
         this.btnRemoveItems = page.locator('input[name="removefromcart"]');
-        this.lblProductNames = page.locator('.product-name a');
+        this.lblProductNames = page.locator("table[class='cart'] tbody tr td a");
         this.lblProductPrices = page.locator('.product-unit-price');
         this.lblSubtotal = page.locator('.product-subtotal');
         this.lblTotal = page.locator('.order-total .value-summary');
-        this.chkTermsOfService = page.getByLabel('I agree with the terms of service');
+        this.chkTermsOfService = page.locator('input#termsofservice');
         this.btnCheckout = page.getByRole('button', { name: 'Checkout' });
         this.lblEmptyCart = page.locator('.order-summary-content:has-text("Your Shopping Cart is empty")');
     }

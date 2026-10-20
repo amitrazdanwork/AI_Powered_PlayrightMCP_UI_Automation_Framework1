@@ -75,14 +75,14 @@ test.describe('Product Search Tests', () => {
 
         await test.step('3) Verify no-result state/message is displayed', async () => {
             // Check for no results message
-            const noResults = homePage.page.locator(':has-text("No products were found")');
+            const noResults = homePage.page.locator("div[class='search-results'] strong");
             await expect(noResults).toBeVisible();
         });
 
         console.log('✅ SEARCH_E2E_003 Completed successfully!');
     });
 
-    test('SEARCH_E2E_004 - Search and open product from results @master @sanity @regression @web', async ({ homePage, productPage }) => {
+    test('SEARCH_E2E_004 - Search and open product from results @master @sanity @regression @web', async ({ homePage, productPage, productDetailsPage }) => {
         const searchData = Helper.getSearchData('SEARCH_E2E_004');
 
         await test.step('1) Navigate to the application URL', async () => {
@@ -100,6 +100,15 @@ test.describe('Product Search Tests', () => {
 
             const productName = await productPage.getProductName();
             expect(productName.toLowerCase()).toContain(searchData.ProductName.toLowerCase());
+        });
+
+
+        await test.step('4) Verify product details are displayed', async () => {
+            //open searched product and verify product details are displayed
+            await productPage.openProductDetails();
+            await productDetailsPage.isProductDetailsPageExists();
+            const productDetailsName = await productDetailsPage.getProductName();
+            expect(productDetailsName.toLowerCase()).toContain(searchData.ProductName.toLowerCase());
         });
 
         console.log('✅ SEARCH_E2E_004 Completed successfully!');
@@ -130,7 +139,12 @@ test.describe('Product Search Tests', () => {
             expect(isCartPage).toBeTruthy();
 
             const productNames = await cartPage.getProductNames();
-            expect(productNames.some(name => name.toLowerCase().includes(searchData.ProductName.toLowerCase()))).toBeTruthy();
+        
+           for(const name of productNames) {
+                console.log(`Product in cart: ${name}`);
+            }
+
+          expect(productNames.some(name => name.includes(searchData.ProductName))).toBeTruthy();
         });
 
         console.log('✅ SEARCH_E2E_005 Completed successfully!');

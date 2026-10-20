@@ -1,0 +1,305 @@
+- generic [ref=f3e2]:
+  - generic [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link [ref=f3e6] [cursor=pointer]:
+        - /url: /
+        - img "Tricentis Demo Web Shop" [ref=f3e7]
+      - list [ref=f3e10]:
+        - listitem [ref=f3e11]:
+          - link "Register" [ref=f3e12] [cursor=pointer]:
+            - /url: /register
+        - listitem [ref=f3e13]:
+          - link "Log in" [ref=f3e14] [cursor=pointer]:
+            - /url: /login
+        - listitem [ref=f3e15]:
+          - link "Shopping cart (0)" [ref=f3e16] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=f3e17]: Shopping cart
+            - generic [ref=f3e18]: (0)
+        - listitem [ref=f3e19]:
+          - link "Wishlist (0)" [ref=f3e20] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=f3e21]: Wishlist
+            - generic [ref=f3e22]: (0)
+      - generic [ref=f3e24]:
+        - status [ref=f3e25]
+        - textbox [ref=f3e26]: Search store
+        - button "Search" [ref=f3e27] [cursor=pointer]
+    - list [ref=f3e29]:
+      - listitem [ref=f3e30]:
+        - link "Books" [ref=f3e31] [cursor=pointer]:
+          - /url: /books
+      - listitem [ref=f3e32]:
+        - link "Computers" [ref=f3e33] [cursor=pointer]:
+          - /url: /computers
+      - listitem [ref=f3e34]:
+        - link "Electronics" [ref=f3e35] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=f3e36]:
+        - link "Apparel & Shoes" [ref=f3e37] [cursor=pointer]:
+          - /url: /apparel-shoes
+      - listitem [ref=f3e38]:
+        - link "Digital downloads" [ref=f3e39] [cursor=pointer]:
+          - /url: /digital-downloads
+      - listitem [ref=f3e40]:
+        - link "Jewelry" [ref=f3e41] [cursor=pointer]:
+          - /url: /jewelry
+      - listitem [ref=f3e42]:
+        - link "Gift Cards" [ref=f3e43] [cursor=pointer]:
+          - /url: /gift-cards
+    - generic:
+      - generic [ref=f3e44]:
+        - generic [ref=f3e45]:
+          - strong [ref=f3e47]: Categories
+          - list [ref=f3e49]:
+            - listitem [ref=f3e50]:
+              - link "Books" [ref=f3e51] [cursor=pointer]:
+                - /url: /books
+            - listitem [ref=f3e52]:
+              - link "Computers" [ref=f3e53] [cursor=pointer]:
+                - /url: /computers
+            - listitem [ref=f3e54]:
+              - link "Electronics" [ref=f3e55] [cursor=pointer]:
+                - /url: /electronics
+            - listitem [ref=f3e56]:
+              - link "Apparel & Shoes" [ref=f3e57] [cursor=pointer]:
+                - /url: /apparel-shoes
+            - listitem [ref=f3e58]:
+              - link "Digital downloads" [ref=f3e59] [cursor=pointer]:
+                - /url: /digital-downloads
+            - listitem [ref=f3e60]:
+              - link "Jewelry" [ref=f3e61] [cursor=pointer]:
+                - /url: /jewelry
+            - listitem [ref=f3e62]:
+              - link "Gift Cards" [ref=f3e63] [cursor=pointer]:
+                - /url: /gift-cards
+        - generic [ref=f3e64]:
+          - strong [ref=f3e66]: Manufacturers
+          - list [ref=f3e68]:
+            - listitem [ref=f3e69]:
+              - link "Tricentis" [ref=f3e70] [cursor=pointer]:
+                - /url: /tricentis
+        - generic [ref=f3e71]:
+          - strong [ref=f3e73]: Newsletter
+          - generic [ref=f3e75]:
+            - text: "Sign up for our newsletter:"
+            - textbox [ref=f3e77]
+            - button "Subscribe" [ref=f3e79] [cursor=pointer]
+      - generic [ref=f3e80]:
+        - list [ref=f3e82]:
+          - listitem [ref=f3e83]:
+            - link "Home" [ref=f3e85] [cursor=pointer]:
+              - /url: /
+            - text: /
+          - listitem [ref=f3e86]:
+            - link "Books" [ref=f3e88] [cursor=pointer]:
+              - /url: /books
+            - text: /
+          - listitem [ref=f3e89]:
+            - strong [ref=f3e90]: Health Book
+        - generic [ref=f3e94]:
+          - generic [ref=f3e95]:
+            - img "Picture of Health Book" [ref=f3e98]
+            - generic [ref=f3e99]:
+              - heading "Health Book" [level=1] [ref=f3e101]
+              - generic [ref=f3e102]: Worried about your health. Get the newest insights here!
+              - generic [ref=f3e103]: "Availability: In stock"
+              - generic [ref=f3e104]: "Delivery date: 1-2 days"
+              - generic [ref=f3e109]:
+                - link "587 review(s)" [ref=f3e110] [cursor=pointer]:
+                  - /url: /productreviews/22
+                - text: "|"
+                - link "Add your review" [ref=f3e111] [cursor=pointer]:
+                  - /url: /productreviews/22
+              - generic [ref=f3e112]:
+                - generic [ref=f3e113]: "Old price: 27.00"
+                - generic [ref=f3e114]: "Price: 10.00"
+              - generic [ref=f3e116]:
+                - text: "Qty:"
+                - textbox "Qty:" [ref=f3e117]: "1"
+                - button "Add to cart" [ref=f3e118] [cursor=pointer]
+                - button "Add to wishlist" [ref=f3e119] [cursor=pointer]
+              - button "Email a friend" [ref=f3e121] [cursor=pointer]
+              - button "Add to compare list" [ref=f3e123] [cursor=pointer]
+            - generic [ref=f3e124]:
+              - paragraph [ref=f3e125]: "Hardcover: 352 pagesPublisher: TricentisLanguage: English"
+              - paragraph [ref=f3e126]: From recipes to daily routines
+          - generic [ref=f3e127]:
+            - generic [ref=f3e128]:
+              - strong [ref=f3e130]: Product tags
+              - generic:
+                - list:
+                  - listitem [ref=f3e131]:
+                    - link "awesome" [ref=f3e132] [cursor=pointer]:
+                      - /url: /producttag/8/awesome
+                    - text: (20)
+                  - listitem [ref=f3e133]: ","
+                  - listitem [ref=f3e134]:
+                    - link "book" [ref=f3e135] [cursor=pointer]:
+                      - /url: /producttag/10/book
+                    - text: (6)
+            - generic [ref=f3e136]:
+              - strong [ref=f3e138]: Customers who bought this item also bought
+              - generic [ref=f3e140]:
+                - link [ref=f3e142] [cursor=pointer]:
+                  - /url: /simple-computer
+                  - img "Picture of Simple Computer" [ref=f3e143]
+                - generic [ref=f3e144]:
+                  - heading [level=2] [ref=f3e145]:
+                    - link "Simple Computer" [ref=f3e146] [cursor=pointer]:
+                      - /url: /simple-computer
+                  - generic "417 review(s)" [ref=f3e147]
+                  - generic [ref=f3e150]:
+                    - generic [ref=f3e151]: "800.00"
+                    - button "Add to cart" [ref=f3e154] [cursor=pointer]
+              - generic [ref=f3e156]:
+                - link [ref=f3e158] [cursor=pointer]:
+                  - /url: /build-your-own-expensive-computer-2
+                  - img "Picture of Build your own expensive computer" [ref=f3e159]
+                - generic [ref=f3e160]:
+                  - heading [level=2] [ref=f3e161]:
+                    - link "Build your own expensive computer" [ref=f3e162] [cursor=pointer]:
+                      - /url: /build-your-own-expensive-computer-2
+                  - generic "529 review(s)" [ref=f3e163]
+                  - generic [ref=f3e166]:
+                    - generic [ref=f3e167]: "1800.00"
+                    - button "Add to cart" [ref=f3e170] [cursor=pointer]
+              - generic [ref=f3e172]:
+                - link [ref=f3e174] [cursor=pointer]:
+                  - /url: /blue-and-green-sneaker
+                  - img "Picture of Blue and green Sneaker" [ref=f3e175]
+                - generic [ref=f3e176]:
+                  - heading [level=2] [ref=f3e177]:
+                    - link "Blue and green Sneaker" [ref=f3e178] [cursor=pointer]:
+                      - /url: /blue-and-green-sneaker
+                  - generic "364 review(s)" [ref=f3e179]
+                  - generic [ref=f3e182]:
+                    - generic [ref=f3e183]: "11.00"
+                    - button "Add to cart" [ref=f3e186] [cursor=pointer]
+            - generic [ref=f3e187]:
+              - strong [ref=f3e189]: Related products
+              - generic [ref=f3e191]:
+                - link [ref=f3e193] [cursor=pointer]:
+                  - /url: /fiction
+                  - img "Picture of Fiction" [ref=f3e194]
+                - generic [ref=f3e195]:
+                  - heading [level=2] [ref=f3e196]:
+                    - link "Fiction" [ref=f3e197] [cursor=pointer]:
+                      - /url: /fiction
+                  - generic "792 review(s)" [ref=f3e198]
+                  - generic [ref=f3e201]:
+                    - generic [ref=f3e202]:
+                      - generic [ref=f3e203]: "35.00"
+                      - generic [ref=f3e204]: "24.00"
+                    - button "Add to cart" [ref=f3e206] [cursor=pointer]
+              - generic [ref=f3e208]:
+                - link [ref=f3e210] [cursor=pointer]:
+                  - /url: /science
+                  - img "Picture of Science" [ref=f3e211]
+                - generic [ref=f3e212]:
+                  - heading [level=2] [ref=f3e213]:
+                    - link "Science" [ref=f3e214] [cursor=pointer]:
+                      - /url: /science
+                  - generic "732 review(s)" [ref=f3e215]
+                  - generic [ref=f3e219]:
+                    - generic [ref=f3e220]: "67.00"
+                    - generic [ref=f3e221]: "51.00"
+              - generic [ref=f3e223]:
+                - link [ref=f3e225] [cursor=pointer]:
+                  - /url: /computing-and-internet
+                  - img "Picture of Computing and Internet" [ref=f3e226]
+                - generic [ref=f3e227]:
+                  - heading [level=2] [ref=f3e228]:
+                    - link "Computing and Internet" [ref=f3e229] [cursor=pointer]:
+                      - /url: /computing-and-internet
+                  - generic "3132 review(s)" [ref=f3e230]
+                  - generic [ref=f3e233]:
+                    - generic [ref=f3e234]:
+                      - generic [ref=f3e235]: "30.00"
+                      - generic [ref=f3e236]: "10.00"
+                    - button "Add to cart" [ref=f3e238] [cursor=pointer]
+  - generic [ref=f3e239]:
+    - generic [ref=f3e240]:
+      - generic [ref=f3e241]:
+        - heading "Information" [level=3] [ref=f3e242]
+        - list [ref=f3e243]:
+          - listitem [ref=f3e244]:
+            - link "Sitemap" [ref=f3e245] [cursor=pointer]:
+              - /url: /sitemap
+          - listitem [ref=f3e246]:
+            - link "Shipping & Returns" [ref=f3e247] [cursor=pointer]:
+              - /url: /shipping-returns
+          - listitem [ref=f3e248]:
+            - link "Privacy Notice" [ref=f3e249] [cursor=pointer]:
+              - /url: /privacy-policy
+          - listitem [ref=f3e250]:
+            - link "Conditions of Use" [ref=f3e251] [cursor=pointer]:
+              - /url: /conditions-of-use
+          - listitem [ref=f3e252]:
+            - link "About us" [ref=f3e253] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=f3e254]:
+            - link "Contact us" [ref=f3e255] [cursor=pointer]:
+              - /url: /contactus
+      - generic [ref=f3e256]:
+        - heading "Customer service" [level=3] [ref=f3e257]
+        - list [ref=f3e258]:
+          - listitem [ref=f3e259]:
+            - link "Search" [ref=f3e260] [cursor=pointer]:
+              - /url: /search
+          - listitem [ref=f3e261]:
+            - link "News" [ref=f3e262] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=f3e263]:
+            - link "Blog" [ref=f3e264] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=f3e265]:
+            - link "Recently viewed products" [ref=f3e266] [cursor=pointer]:
+              - /url: /recentlyviewedproducts
+          - listitem [ref=f3e267]:
+            - link "Compare products list" [ref=f3e268] [cursor=pointer]:
+              - /url: /compareproducts
+          - listitem [ref=f3e269]:
+            - link "New products" [ref=f3e270] [cursor=pointer]:
+              - /url: /newproducts
+      - generic [ref=f3e271]:
+        - heading "My account" [level=3] [ref=f3e272]
+        - list [ref=f3e273]:
+          - listitem [ref=f3e274]:
+            - link "My account" [ref=f3e275] [cursor=pointer]:
+              - /url: /customer/info
+          - listitem [ref=f3e276]:
+            - link "Orders" [ref=f3e277] [cursor=pointer]:
+              - /url: /customer/orders
+          - listitem [ref=f3e278]:
+            - link "Addresses" [ref=f3e279] [cursor=pointer]:
+              - /url: /customer/addresses
+          - listitem [ref=f3e280]:
+            - link "Shopping cart" [ref=f3e281] [cursor=pointer]:
+              - /url: /cart
+          - listitem [ref=f3e282]:
+            - link "Wishlist" [ref=f3e283] [cursor=pointer]:
+              - /url: /wishlist
+      - generic [ref=f3e284]:
+        - heading "Follow us" [level=3] [ref=f3e285]
+        - list [ref=f3e286]:
+          - listitem [ref=f3e287]:
+            - link "Facebook" [ref=f3e288] [cursor=pointer]:
+              - /url: http://www.facebook.com/nopCommerce
+          - listitem [ref=f3e289]:
+            - link "Twitter" [ref=f3e290] [cursor=pointer]:
+              - /url: https://twitter.com/nopCommerce
+          - listitem [ref=f3e291]:
+            - link "RSS" [ref=f3e292] [cursor=pointer]:
+              - /url: /news/rss/1
+          - listitem [ref=f3e293]:
+            - link "YouTube" [ref=f3e294] [cursor=pointer]:
+              - /url: http://www.youtube.com/user/nopCommerce
+          - listitem [ref=f3e295]:
+            - link "Google+" [ref=f3e296] [cursor=pointer]:
+              - /url: https://plus.google.com/+nopcommerce
+    - generic [ref=f3e297]:
+      - text: Powered by
+      - link "nopCommerce" [ref=f3e298] [cursor=pointer]:
+        - /url: http://www.nopcommerce.com/
+    - generic [ref=f3e299]: Copyright © 2026 Tricentis Demo Web Shop. All rights reserved.
