@@ -1,5 +1,7 @@
 # Playwright MCP AI 1 — UI & API Test Automation Framework
 
+**NOTE: As of now, this framework is for UI automation testing only**
+
 A TypeScript-based test automation framework built with **Playwright**, supporting **Web UI testing** for Dummy web app - DemoWebShop .
 
 Current setup includes below things: -
